@@ -1,0 +1,125 @@
+/* Twitter Module on Home Page Grid Mid Bottom */
+.tweet_main {
+	background:url('../resources/tabs_bottom_sprite.png') repeat-x scroll left bottom transparent;
+	overflow:hidden;
+	height:260px;
+}
+.tweet-top div {
+	margin:14px 0 5px 14px;
+	float:left;
+}
+.tweet-follow {
+	padding-top:12px;
+}
+#tweet {
+	width:426px;
+	font: 12px arial;
+	color:#333333;
+}
+#tweet-container {
+	margin:7px 0 0 14px;
+	float: left;
+	height: 185px;
+	overflow-y: scroll;
+	position: relative;
+	width: 446px;
+}
+#tweet .profile_icon {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+#tweet .profile_details {
+	float:left;
+	width:370px;
+	margin-bottom: 14px;
+}
+#tweet p {
+	margin: 15px 15px 0;
+}
+#tweet hr {
+	clear: both;
+	float: none;
+	margin: 10px 0 0 15px;
+	background: none repeat scroll 0 0 #DFDFDF;
+	border: medium none;
+	display: block;
+	height: 1px;
+	margin: 0 0 14px;
+}
+#tweet a:link, #tweet a:visited, #tweet a:active {
+	color: #2075c2;
+	text-decoration:none;
+	font:12px Arial, Helvetica, sans-serif;
+}
+#web_intent a:link, #web_intent a:visited, #web_intent a:active {
+	margin: 0 8px 0 0;
+}
+#web_intent .time {
+	margin: 0 8px 0 0;
+}
+#tweet_holder {
+	float: left;
+	height: 260px;
+	margin: 0 2em 15px 0;
+	width: 460px;
+	border: 1px solid #DDDDDD;
+	margin: 0 0 8px;
+	padding: 0;
+	background:url("../resources/gradient_top.png") repeat-x scroll left top transparent;
+}
+/* Tiny Scrollbar */
+#scrollbar1 { 
+	position: absolute; 
+	width: 460px; 
+	margin: 55px 0 10px;
+}
+#scrollbar1 .viewport { 
+	overflow: hidden; 
+	width: 445px; 
+	height: 185px; 
+	position: relative;
+}
+#scrollbar1 .overview { 
+	list-style: none; 
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	padding: 0; 
+	margin: 0;
+}
+#scrollbar1 .scrollbar{ 
+	/*background: none repeat scroll 0 0 #CCCCCC; */
+	position: relative; 
+	background-position: 0 0; 
+	float: right; 
+	width: 6px;
+}
+#scrollbar1 .track { 
+	background: -moz-linear-gradient(left center , #F2F2F2 0px, #FBFBFB 50%, #FDFDFD 54%, #FDFDFD 58%, #FBFBFB 62%, #EFEFEF 100%) repeat scroll 0 0 transparent; 
+	border-left: 1px solid #EAEAEA; 
+	height: 100%; 
+	width:6px; 
+	position: relative; 
+	padding: 0 1px;
+}
+#scrollbar1 .thumb { 
+	background: none repeat scroll 0 0 #808080; 
+	border-radius: 3px 3px 3px 3px; 
+	height: 20px; 
+	width: 6px; 
+	cursor: pointer; 
+	overflow: hidden; 
+	position: absolute; 
+	top: 0; 
+	left: 0px;
+}
+#scrollbar1 .thumb .end { 
+	overflow: hidden; 
+	height: 5px; 
+	width: 25px;
+}
+#scrollbar1 .disable { 
+	display: none;
+}
+/* Tiny Scrollbar */
+/* Twitter Module on Home Page Grid Mid Bottom */

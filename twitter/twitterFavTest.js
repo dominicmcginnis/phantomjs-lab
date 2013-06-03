@@ -20,14 +20,6 @@ var buildTwitterFrame = function(twitterJson, formatTwitString, relative_time) {
     $("#tweet>div,#tweet>hr").each(function() {
        $("#tweet>div:gt(2),#tweet>hr:gt(2)").hide();
     });
-    $('#tweet-container').scroll(function(){
-        var tweetmainHeight=$('.tweet_main').height();
-        var tweetcontainerHeight=$('#tweet-container').height();
-        var tweetscrolltopHeight=$("#tweet-container").scrollTop();
-        if(tweetmainHeight <= tweetcontainerHeight + tweetscrolltopHeight + 24) {
-            $('#tweet>div:gt(2),#tweet>hr:gt(2)').show();
-        }
-    });
 }
 
 var relative_time = function (time_value) {
