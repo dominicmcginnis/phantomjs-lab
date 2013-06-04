@@ -12,14 +12,11 @@ var jqueryLib = fs.workingDirectory + fs.separator + 'lib' + fs.separator + 'jqu
 var buildTwitterFrame = function(twitterJson, formatTwitString, relative_time) {
     $(".tweet-follow").html($("#twitter-footer-src").html()).css({'display':'block','float':'left','margin-right':'20px'});
     var data = twitterJson;
-    var htmlContent = "";
+    var htmlContent = '';
     for (var i = 0, j = data.length; i < j; i++) {
         htmlContent += '<div><div class="profile_icon">' + '<a href="http://twitter.com/' + data[i].user.screen_name + '" target="_blank"><img src="' + data[i].user.profile_image_url + '" width="42" height="42" alt="Twitter"></a></div><div class="profile_details"><div>' + '<span class="user"><a href="http://twitter.com/' + data[i].user.screen_name + '" target="_blank">' + data[i].user.name + '</a></span> ' + formatTwitString(data[i].text) + '</div>' + '<div id="web_intent" style="color:#2075c2;">' + '<a href="http://twitter.com/' + data[i].user.screen_name + '/statuses/' + data[i].id_str + '" target="_blank">' + relative_time(data[i].created_at) + '</a><span class="time">.</span>' + '<a href="http://twitter.com/intent/tweet?in_reply_to=' + data[i].id_str + '" target="_blank">' + 'reply</a><span class="time">.</span>' + '<a href="http://twitter.com/intent/retweet?tweet_id=' + data[i].id_str + '" target="_blank">' + 'retweet</a><span class="time">.</span>' + '<a href="http://twitter.com/intent/favorite?tweet_id=' + data[i].id_str + '" target="_blank">' + 'favorites</a>' + '</div></div></div>' + '<hr>'
     }
-    $("#tweet").html(htmlContent);
-    $("#tweet>div,#tweet>hr").each(function() {
-       $("#tweet>div:gt(2),#tweet>hr:gt(2)").hide();
-    });
+    $('#tweetContent').html("<!--"+ htmlContent + "-->");
 }
 
 var relative_time = function (time_value) {
@@ -75,10 +72,10 @@ function buildTweets (tweets, buildTwitterFrame, formatTwitString, relative_time
             console.log("Could not open file: " + twitterFavsFrame);
         } else {
             console.log("Evaluating twitter frame");
-            if(page2.injectJs(jqueryLib)) {
+           if(page2.injectJs(jqueryLib)) {
                 page2.evaluate( function(tweets, buildTwitterFrame, formatTwitString, relative_time) {
                     console.log("Injected Jquery for usage");
-                    buildTwitterFrame(tweets, formatTwitString, relative_time);                
+                    buildTwitterFrame(tweets, formatTwitString, relative_time);
                 }, tweets, buildTwitterFrame, formatTwitString, relative_time);
 
                 console.log("Writing final file");
